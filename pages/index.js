@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../src/components/Header';
 import ImageList from '../src/components/ImageList';
 import Footer from '../src/components/Footer';
-
 import axios from 'axios';
 
 export async function getServerSideProps({ params, req, res, query }) {
@@ -16,7 +15,6 @@ export async function getServerSideProps({ params, req, res, query }) {
   if (imagesApi.status === 200) {
     images = imagesApi.data;
   }
-  console.log(images);
   return {
     props: {
       rates,
