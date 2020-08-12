@@ -11,9 +11,10 @@ const CardContainer = styled.div`
   border-radius: 5px;
   box-shadow: 0px 0px 5px 0px rgba(37, 42, 49, 0.16),
     0px 2px 8px 0px rgba(37, 42, 49, 0.12);
-
   min-width: 300px;
   min-height: 400px;
+  width: 100%;
+  height: 480px;
 
   ${media.tablet(css`
     width: 600px;
