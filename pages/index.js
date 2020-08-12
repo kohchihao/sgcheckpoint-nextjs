@@ -3,10 +3,11 @@ import Header from '../src/components/Header';
 import ImageList from '../src/components/ImageList';
 import Footer from '../src/components/Footer';
 import axios from 'axios';
+import { BASE_URL } from '../utils/siteUrl';
 
 export async function getServerSideProps({ params, req, res, query }) {
-  const ratesApi = await axios.get('http://localhost:3000/api/rates');
-  const imagesApi = await axios.get('http://localhost:3000/api/images');
+  const ratesApi = await axios.get( BASE_URL + '/api/rates');
+  const imagesApi = await axios.get(BASE_URL + '/api/images');
   let rates = null;
   let images = null;
   if (ratesApi.status === 200) {
