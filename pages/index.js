@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../src/components/Header';
 import ImageList from '../src/components/ImageList';
+import Footer from '../src/components/Footer';
 
 import axios from 'axios';
 
@@ -30,6 +31,8 @@ const Home = ({ rates, images }) => {
       <Header rates={rates} />
 
       <ImageList images={images} />
+
+      <Footer />
     </div>
   );
 };
