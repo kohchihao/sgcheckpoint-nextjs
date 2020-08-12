@@ -10,19 +10,18 @@ import {
 import styled, { css } from 'styled-components';
 import media from '@kiwicom/orbit-components/lib/utils/mediaQuery';
 
-//ff9800
 const Container = styled.div`
   background: #ff9800;
-  height: 180px;
+  height: 200px;
   padding: 40px;
 
   ${media.largeMobile(css`
-    height: 230px;
+    height: 250px;
   `)};
 `;
 
 const MaxWidthContainer = styled.div`
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 `;
 
@@ -34,6 +33,7 @@ const Header = ({ rates }) => {
       setLoading(false);
     }
   }, [rates]);
+
   return (
     <Container>
       <MaxWidthContainer>
@@ -50,6 +50,7 @@ const Header = ({ rates }) => {
                 <Loading />
               ) : (
                 <>
+                  <Text>🇸🇬 → 🇲🇾</Text>
                   <Heading>SGD 1 → RM{rates.rates.MYR}</Heading>
                   <Text>Updated on {rates.date}</Text>
                 </>
