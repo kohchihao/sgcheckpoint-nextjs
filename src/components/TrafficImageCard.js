@@ -61,7 +61,7 @@ const CardDescription = ({ title, description }) => {
   return (
     <Stack direction="column" spacing="tight">
       <OneLineTextContainer>
-        <Text size="normal" weight="bold">
+        <Text size="large" weight="bold">
           {title}
         </Text>
       </OneLineTextContainer>
